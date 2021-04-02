@@ -1,4 +1,4 @@
-# FileSearch
+# reFileSearch
 
 A quick, reusable file search module using a regular expression to search
 a file path for a filename.
@@ -8,9 +8,9 @@ a file path for a filename.
 Drop it into your working folder and import to use.
 
 ```py
-import file_search
+import re_file_search
 
-needed_file = file_search.get_path('/Users/dev/Downloads/', 'Invoice.*pdf')
+needed_file = re_file_search.get_path('/Users/dev/Downloads/', 'Invoice.*pdf')
 
 print(needed_file)
 # '/Users/dev/Downloads/Invoice_1234.pdf'
