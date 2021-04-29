@@ -23,7 +23,10 @@ def get_file(searchdir: str, regex: str) -> Path:
     Returns:
         pathlib.Path: File path of first file matching the searched regex. 
     """
-    return _find_matches(searchdir, regex, first=True)[0]
+    try:
+        return _find_matches(searchdir, regex, first=True)[0]
+    except IndexError:
+        return None
 
 
 def get_list(searchdir: str, regex: str) -> list:
