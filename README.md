@@ -12,11 +12,11 @@ or a list of matches formatted as a Path objects if found.
 Drop it into your working folder and import to use.
 
 ```py
-import re_file_search
+import regexsearch
 
 # Get a single file path:
-needed_file = re_file_search.re_get_file('/Users/dev/Downloads/', 'Invoice.*pdf$')
+needed_file = regexsearch.searchfile('/Users/dev/Downloads/', 'Invoice.*pdf$')
 
 # Get a list of file paths:
-files_list = re_file_search.re_get_list('/Users/dev/Downloads/', 'Invoice.*pdf$') 
+files_list = regexsearch.searchfiles('/Users/dev/Downloads/', 'Invoice.*pdf$') 
 ```

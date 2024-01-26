@@ -4,16 +4,17 @@ Recursively searches the passed directory (search_dir) for files matching
 the passed regular expression (regex) and returns either the first match
 or a list of matches formatted as a Path objects if found.
 
-Rev: 12/20/2023
-
 """
+
+__version__ = "1.0.0"
+
 
 import os
 import re
 from pathlib import Path
 
 
-def re_get_file(search_dir: str, regex: str) -> Path:
+def searchfile(search_dir: str, regex: str) -> Path:
     """Recursively searches the passed directory (search_dir) for files matching
     the passed regular expression (regex) and returns the first match found
     formatted as a pathlib.Path object. 
@@ -32,7 +33,7 @@ def re_get_file(search_dir: str, regex: str) -> Path:
         return None
 
 
-def re_get_list(search_dir: str, regex: str) -> list:
+def searchfiles(search_dir: str, regex: str) -> list:
     """Recursively searches the passed directory (search_dir) for files matching
     the passed regular expression (regex) and returns a list of matches
     formatted as pathlib.Path objects if found. 
